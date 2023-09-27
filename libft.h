@@ -18,5 +18,4 @@ void creat_account(New_Clents *cleant, int *count);
 void get_info(New_Clents *cleant);
 int login(New_Clents **cleant, int *count);
 
-
 #endif

@@ -10,7 +10,7 @@ all:$(NAME)
 $(NAME): $(OBJF)
 	@ar -rc $(NAME) $(OBJF)
 run:
-	@$(CC) main.c $(NAME)
+	@$(CC) main.c $(NAME) -g
 	@./a.out
 
 clean:

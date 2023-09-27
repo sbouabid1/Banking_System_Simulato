@@ -16,7 +16,7 @@ void creat_account(New_Clents *cleant, int *count)
 	scanf("%d",&cleant->age);
 	printf("Enter your phone number : ");
 	scanf("%d",&cleant->phone_number);
-	*count+= 1;
+	*count+=1;
 	getchar();
 	printf("\n\n\033[0;32mCongratulations now you have account in bank\033[0m\n\n");
 	getchar();

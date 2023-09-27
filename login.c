@@ -8,8 +8,10 @@ int login(New_Clents **cleant, int *count)
 	char password[30];
 	printf("Enter your Email : ");
 	scanf("%s",email);
+	getchar();
 	printf("Enter your password : ");
 	scanf("%s",password);
+	getchar();
 	int i = 0;
 	while(i < *count){
 		if(strcmp(email,cleant[i]->email) == 0){
@@ -26,5 +28,5 @@ int login(New_Clents **cleant, int *count)
 	if(cleant[i] == NULL)
 		printf("\033[0;31m\n\nWrong email\033[0m\n");
 	printf("\n\n");
-	return 0;
+	return -1;
 }
