@@ -6,7 +6,7 @@
 #include <string.h>
 
 
-typedef struct{
+typedef struct Clent{
 	char email[30];
 	char Fname[30];
 	char Lname[30];
@@ -14,8 +14,9 @@ typedef struct{
 	int age;
 	int phone_number;
 } New_Clents;
+
 void creat_account(New_Clents *cleant, int *count);
 void get_info(New_Clents *cleant);
-int login(New_Clents **cleant, int *count);
+int login(New_Clents *cleant, int *count);
 
 #endif

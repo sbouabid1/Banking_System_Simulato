@@ -5,7 +5,8 @@ int main()
 {
 	int opt;
 	int count = 0;
-	New_Clents *cleant = malloc(sizeof(New_Clents) * 100);
+	int login_return;
+	New_Clents *cleant = malloc(sizeof(New_Clents) * 5);
 
 	system("clear");
 	printf("\n\033[1;35m \tWeclome to Alex Bank .\033[0m\n\n");
@@ -18,10 +19,10 @@ int main()
 		scanf("%d",&opt);
 		switch(opt){
 			case 1:
-				creat_account(&cleant[count],&count);
+				creat_account(cleant,&count);
 				break;
 			case 2: 
-				int login_return = login(&cleant,&count);
+				login_return = login(cleant,&count);
 				if(login_return >= 0)
 					get_info(&cleant[login_return]);
 				else{
@@ -34,5 +35,4 @@ int main()
 		system("clear");
 		printf("\n\033[1;35m \tWeclome to Alex Bank .\033[0m\n\n");
 	}while(opt != 0);
-	
 }
